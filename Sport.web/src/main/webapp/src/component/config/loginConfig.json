@@ -1,0 +1,9 @@
+{
+    "displayName" : "Login",
+    "name" : "login",
+    "templateName" : "login",
+    "url" : "user.html",
+    "server": "back-endsport",
+    "context": "http://back-endsport.herokuapp.com/webresources/Auth",
+    "el" : "#main"
+}
