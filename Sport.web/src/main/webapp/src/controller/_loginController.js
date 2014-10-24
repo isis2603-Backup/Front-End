@@ -48,22 +48,22 @@ define(['model/loginModel'], function(loginModel) {
 			
 			App.Delegate.LoginDelegate.loginUser(model,function(data){
 				self.token_JWT= data;
-				console.log('token controller:'+ data);
-				console.log(self.token_JWT);
+//				console.log('token controller:'+ data);
+//				console.log(self.token_JWT);
 				sessionStorage.setItem('auth_token',self.token_JWT);
 				var tok = sessionStorage.getItem('auth_token');
-				console.log("datos partidos: "+tok.split("."));
+//				console.log("datos partidos: "+tok.split("."));
 				var user=tok.split(".")[1];
 				console.log("user: "+user);
 				var deco=window.atob(user);// Decodifica en base64
 				deco=JSON.parse(deco);
 				var user = deco["userName"];
-				alert('BIENVENDIDO: ' + user);
+				alert('BIENVENIDO: '+ user);
 				console.log(deco);
-				window.location.href = 'http://localhost:8089/sport.html';
+				window.location.href = '../sport.html';
 			});
-			//token_JWT="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpZCI6MSwidXNlck5hbWUiOiJqdWFuMSIsInBhc3N3b3JkIjoiIiwiZW1haWwiOiJqdWFuMSJ9.LP26GLdfCH-p6E7UpjyB4mF2u9uR2jSh5WlK_w8V3TpkHlzV3zkrIWX5YGfG66MdOvoe9N-VDrOugn139ZHb1A";
-			console.log('token afuera:' + this.token_JWT);
+			
+			
         },
         list: function(params,callback,context) {
             if (params) {

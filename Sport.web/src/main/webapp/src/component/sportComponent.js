@@ -39,7 +39,7 @@ define(['component/_sportComponent'], function() {
             },function(){
 				
 				sessionStorage.clear();
-				window.location.href = 'http://localhost:8089/index.html';
+				window.location.href = '../login.html';
 				
 				
 			});
