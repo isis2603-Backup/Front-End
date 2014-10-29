@@ -3,7 +3,7 @@
     "name" : "sport",
     "templateName" : "sport",
     "url" : "user.html",
-    "server": "back-endsport",
-    "context": "http://back-endsport.herokuapp.com/webresources/Sport",
+    "server": "back-endsport.herokuapp.com",
+    "context": "https://back-endsport.herokuapp.com/webresources/Sport",
     "el" : "#main"
 }

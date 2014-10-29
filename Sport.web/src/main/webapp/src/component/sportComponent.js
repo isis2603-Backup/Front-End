@@ -32,7 +32,7 @@ define(['component/_sportComponent'], function() {
         postInit: function(){
         	this.toolbarComponent.addButton({
                 name: 'logout',
-                icon: 'glyphicon-user',
+                icon: 'glyphicon glyphicon-log-out',
 				displayName: 'Logout',
                 show: true,
                 menu: 'utils'

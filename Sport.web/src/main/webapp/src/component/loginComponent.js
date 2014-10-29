@@ -5,9 +5,12 @@
  */
 
 
-define(['component/_loginComponent','controller/toolbarController','model/toolbarModel'], function() {
+define(['component/_loginComponent','controller/toolbarController','model/toolbarModel','delegate/loginDelegate'], function() {
     App.Component.LoginComponent = App.Component._LoginComponent.extend({
-        postInit: function(){
+        
+		postInit: function(){
+			
+			
 			var self = this;
 			this.toolbarComponent.hideButton("create");
 			this.toolbarComponent.hideButton("refresh");
@@ -16,7 +19,7 @@ define(['component/_loginComponent','controller/toolbarController','model/toolba
 			this.toolbarComponent.addButton({
 				name: 'login',
                 icon: 'glyphicon-user',
-				displayName: 'Login',
+				displayName: 'Log in',
                 show: false,
                 menu: 'utils'
 			},function(){
@@ -27,7 +30,7 @@ define(['component/_loginComponent','controller/toolbarController','model/toolba
 			this.toolbarComponent.addButton({
                 name: 'showlogin',
                 icon: 'glyphicon-user',
-				displayName: 'Sign Up',
+				displayName: 'Log in',
                 show: true,
                 menu: 'utils'
             },function(){

@@ -52,14 +52,17 @@ define(['model/loginModel'], function(loginModel) {
 //				console.log(self.token_JWT);
 				sessionStorage.setItem('auth_token',self.token_JWT);
 				var tok = sessionStorage.getItem('auth_token');
-//				console.log("datos partidos: "+tok.split("."));
+				console.log("datos partidos: "+tok.split("."));
 				var user=tok.split(".")[1];
 				console.log("user: "+user);
 				var deco=window.atob(user);// Decodifica en base64
 				deco=JSON.parse(deco);
 				var user = deco["userName"];
-				alert('BIENVENIDO: '+ user);
+				var tenant = deco["tenant"];
+//				alert('BIENVENIDO: '+ user);
 				console.log(deco);
+				console.log("tenant" + tenant);
+				alert('Bienvenido' + user);
 				window.location.href = '../sport.html';
 			});
 			

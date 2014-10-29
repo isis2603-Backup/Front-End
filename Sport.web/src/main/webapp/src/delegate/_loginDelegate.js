@@ -7,6 +7,7 @@
 
 define(['component/_CRUDComponent'], function() {
     App.Delegate._LoginDelegate = App.Component.BasicComponent.extend({
-    
+			
+			
 });    
 });
