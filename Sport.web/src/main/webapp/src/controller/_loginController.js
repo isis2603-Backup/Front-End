@@ -41,33 +41,6 @@ define(['model/loginModel'], function(loginModel) {
                 Backbone.trigger(this.componentId + '-' + 'post-login-create', {view: this});
             }
         },
-		login: function() {
-            var self = this;
-            var model = $('#' + this.componentId + '-loginForm').serializeObject();
-			var token_JWT;
-			
-			App.Delegate.LoginDelegate.loginUser(model,function(data){
-				self.token_JWT= data;
-//				console.log('token controller:'+ data);
-//				console.log(self.token_JWT);
-				sessionStorage.setItem('auth_token',self.token_JWT);
-				var tok = sessionStorage.getItem('auth_token');
-				console.log("datos partidos: "+tok.split("."));
-				var user=tok.split(".")[1];
-				console.log("user: "+user);
-				var deco=window.atob(user);// Decodifica en base64
-				deco=JSON.parse(deco);
-				var user = deco["userName"];
-				var tenant = deco["tenant"];
-//				alert('BIENVENIDO: '+ user);
-				console.log(deco);
-				console.log("tenant" + tenant);
-				alert('Bienvenido' + user);
-				window.location.href = '../sport.html';
-			});
-			
-			
-        },
         list: function(params,callback,context) {
             if (params) {
                 var data = params.data;

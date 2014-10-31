@@ -1,49 +1,3 @@
-<!--<!DOCTYPE html>
-<html lang='en'>
-<head>
-    <meta charset="UTF-8" /> 
-    <title>
-        Login Form
-    </title>
-    <link rel="stylesheet" type="text/css" href="src/style.css" />
-</head>
-<body>
- 
-<div id="wrapper">
-Arranca formulario de autenticación básica. La acción del mismo es al api JAAS 
-poniendo el nombre clave "j_security_check"(glassfish sabe a que está haciendo referencia)
-	<form name="login-form" class="login-form" action="j_security_check">
- 
-		<div class="header">
-		<h1>Login</h1>
-		<span>Fill out the form below to enter the page.</span>
-		</div>
- 
-		<div class="content">
-                El formulario tiene 2 inputs con el usuario y la contraseña. Cada uno de estos debe 
-                tener los nombres clava "j_username" y "j_password" respectivamente 
-		<input name="j_username" type="text" class="input username" placeholder="Username" />
-		<div class="user-icon"></div>
-		<input name="j_password" type="password" class="input password" placeholder="Password" />
-		<div class="pass-icon"></div>		
-		</div>
- 
-		<div class="footer">
-                    <a href="register.html" class="register"> Register </a>
-                     el boton de submit es el común
-		<input type="submit" name="submit" value="Login" class="button" />
- 
-		</div>
- 
-	</form>
- 
-</div>
-<div class="gradient"></div>
- 
- 
-</body>
-</html>--> 
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -68,6 +22,8 @@ poniendo el nombre clave "j_security_check"(glassfish sabe a que está haciendo 
         <script src="./js/vendor/backbone.paginator.min.js"></script>
         <script src="./js/vendor/bootstrap-datepicker.js"></script>
         <script data-main="src/main" src="./js/vendor/require.js"></script>
+		<!-- Se agrega esta librer�a para encriptar el env�o de password encriptados-->
+		<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha1.js"></script>
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
           <script src="../../assets/js/html5shiv.js"></script>

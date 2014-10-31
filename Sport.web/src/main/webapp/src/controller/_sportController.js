@@ -114,11 +114,14 @@ define(['model/sportModel'], function(sportModel) {
 						Backbone.trigger(self.componentId + '-' + 'error', {event: 'sport-list', view: self, error: error});
 					},
 					headers: {'X_REST_USER': tok
+					},
+					xhrFields: {
+						withCredentials: true
 					}
-					,
-					beforeSend: function(xhr) {
-						xhr.setRequestHeader("Authorization", make_base_auth("exampleuser", "examplepassword"));
-					}
+//					,
+//					beforeSend: function(xhr) {
+//						xhr.setRequestHeader("Authorization", make_base_auth("exampleuser", "examplepassword"));
+//					}
 				});
 			}
 		},
@@ -190,7 +193,7 @@ define(['model/sportModel'], function(sportModel) {
 					},
 					error: function() {
 						Backbone.trigger(self.componentId + '-' + 'error', {event: 'sport-delete', view: self, error: error});
-					}, 
+					},
 					headers: {'X_REST_USER': tok
 					},
 					beforeSend: function(xhr) {
