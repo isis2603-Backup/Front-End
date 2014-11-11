@@ -24,7 +24,7 @@ define(['delegate/_loginDelegate'], function() {
 //			alert('JSON Enviado: '+JSON.stringify(login));
             $.ajax({
                 type: "POST",
-                url: "https://back-endsport.herokuapp.com/webresources/Auth/login_test",
+                url: "http://localhost:8089/webresources/Auth/login_test",
                 crossDomain: true,
                 dataType: 'json',
 				data : JSON.stringify(login),
@@ -37,7 +37,7 @@ define(['delegate/_loginDelegate'], function() {
            }, this)).error(_.bind(function(data) {
                console.log("data");
 			   alert('USUARIO NO AUTENTICADO');
-			   window.location.href = '../error.html';
+			   window.location.href = '../Sport_web/error.html';
                callbackError(data);
            }, this));
        }

@@ -3,7 +3,7 @@
     "name" : "login",
     "templateName" : "login",
     "url" : "user.html",
-    "server": "back-endsport",
-    "context": "http://back-endsport.herokuapp.com/webresources/Auth",
+    "server": "localhost:8089",
+    "context": "http://localhost:8089/webresources/Auth",
     "el" : "#main"
 }

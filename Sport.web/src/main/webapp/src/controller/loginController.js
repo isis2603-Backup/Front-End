@@ -29,11 +29,10 @@ define(['controller/_loginController','delegate/loginDelegate'], function() {
 				deco=JSON.parse(deco);
 				var user = deco["userName"];
 				var tenant = deco["tenant"];
-//				alert('BIENVENIDO: '+ user);
 				console.log(deco);
 				console.log("tenant" + tenant);
 				alert('Bienvenido' + user);
-				window.location.href = '../sport.html';
+				window.location.href = '../Sport_web/sport.html';
 			});
 			
 			

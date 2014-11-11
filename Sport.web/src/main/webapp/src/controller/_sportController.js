@@ -114,11 +114,12 @@ define(['model/sportModel'], function(sportModel) {
 						Backbone.trigger(self.componentId + '-' + 'error', {event: 'sport-list', view: self, error: error});
 					},
 					headers: {'X_REST_USER': tok
-					},
-					xhrFields: {
-						withCredentials: true
 					}
-//					,
+//					},
+//					xhrFields: {
+//						withCredentials: true
+//					}
+					,
 //					beforeSend: function(xhr) {
 //						xhr.setRequestHeader("Authorization", make_base_auth("exampleuser", "examplepassword"));
 //					}
